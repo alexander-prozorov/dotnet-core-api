@@ -11,10 +11,9 @@ pool:
 
 steps:
 
-- task: NuGetAuthenticate@0
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: "3.1.402"
+- task: NuGetToolInstaller@1
 
-- script: "dotnet restore --verbosity Detailed"
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '**/*.sln'
+    noCache: true 
