@@ -17,8 +17,4 @@ steps:
     packageType: 'sdk'
     version: "3.1.402"
 
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-    feedsToUse: 'select'
-    vstsFeed: 'b9f6e37b-63ed-49a3-9588-2cbf0f63e195'
+- script: "dotnet restore"
