@@ -20,4 +20,5 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
-    feedsToUse: 'config'
+    feedsToUse: 'select'
+    vstsFeed: 'b9f6e37b-63ed-49a3-9588-2cbf0f63e195'
