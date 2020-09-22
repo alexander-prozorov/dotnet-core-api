@@ -11,9 +11,6 @@ pool:
 
 steps:
 
-- task: NuGetAuthenticate@0
-  inputs:
-
 - task: NuGetToolInstaller@1
   inputs:
     versionSpec: 
