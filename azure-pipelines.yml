@@ -11,6 +11,14 @@ pool:
 
 steps:
 
+- task: NuGetToolInstaller@1
+  inputs:
+    versionSpec: '4.x'
+    
+- task: NuGetAuthenticate@0
+  inputs:
+    forceReinstallCredentialProvider: true
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
